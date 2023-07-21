@@ -1,11 +1,12 @@
 import React from 'react'
-
-export default function (props) {
+import data from '../data.JSON'
+import HornedBeasts from './HornedBeasts'
+export default function Main () {
   return (
     <div>
-        <h2>{props.title}</h2>
-        <p>{props.para}</p>
-        <img src={props.imgUrl}></img>
+        {data.map(beasts => {
+        return <HornedBeasts beasts={beasts}/>})}
+    
     </div>
   )
 }
